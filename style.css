@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "static";
+  src: url("/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format(truetype);
+  font-style: normal;
+}
+
+body {
+  font-family: "static";
+  background-color: hsl(0, 0%, 8%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.profile {
+  display: grid;
+  grid-template-areas: "profileCard" "attribution";
+  text-align: center;
+  width: 400px;
+  
+}
+.profileCard {
+  grid-area: profileCard;
+  background-color: hsl(0, 0%, 12%);
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+.country {
+  color: hsl(75, 94%, 57%);
+  line-height: 0px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.button {
+  list-style: none;
+  display: block;
+  margin: 10px;
+  background-color: hsl(0, 0%, 20%);
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 20%);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  grid-area: attribution;
+}
+.attribution a {
+  color: hsl(75, 94%, 57%);
+}
+
