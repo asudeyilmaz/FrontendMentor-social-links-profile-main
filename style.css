@@ -1,12 +1,11 @@
 @font-face {
   font-family: "static";
-  src: url("/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
-    format(truetype);
+  src: url("/assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-style: normal;
 }
 
 body {
-  font-family: "static";
+  font-family: "static", sans-serif;
   background-color: hsl(0, 0%, 8%);
   color: white;
   display: flex;
@@ -18,30 +17,31 @@ body {
   display: grid;
   grid-template-areas: "profileCard" "attribution";
   text-align: center;
-  width: 400px;
+  max-width: clamp(20rem, 80%, 25rem);
+  margin: clamp(0.5rem, 2vw, 1rem);
   
 }
 .profileCard {
   grid-area: profileCard;
   background-color: hsl(0, 0%, 12%);
-  padding: 1rem 2rem;
-  margin: 1rem;
-  border-radius: 1rem;
+  padding: clamp(0.75rem, 1vw, 1rem) clamp(1.5rem, 2vw, 2rem);
+  margin: clamp(0.5rem, 2vw, 1rem) 0;
+  border-radius: clamp(0.5rem, 1vw, 1rem);
 }
 .country {
   color: hsl(75, 94%, 57%);
-  line-height: 0px;
-  padding-bottom: 20px;
-  font-size: 14px;
+  line-height: 1.2;
+  padding-block-end: clamp(0.75rem, 2vw, 1.25rem);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 
 .button {
   list-style: none;
   display: block;
-  margin: 10px;
+  margin: clamp(0.25rem, 1vw, 0.625rem) 0;
   background-color: hsl(0, 0%, 20%);
-  padding: 12px;
-  border-radius: 10px;
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+  border-radius: clamp(0.5rem, 1vw, 0.625rem);
   text-decoration: none;
   color: white;
 }
@@ -50,20 +50,29 @@ body {
   background-color: hsl(75, 94%, 57%);
   color: hsl(0, 0%, 20%);
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
 
 .avatar {
   border-radius: 50%;
-  width: 100px;
+  width: clamp(5rem, 15vw, 6.25rem);
+  height: auto;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
   text-align: center;
   grid-area: attribution;
 }
 .attribution a {
   color: hsl(75, 94%, 57%);
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
+@media  screen and (max-width: 375px) {
+	html, body {
+		padding: 0; } 
+  }
