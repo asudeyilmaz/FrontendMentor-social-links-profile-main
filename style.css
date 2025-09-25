@@ -34,9 +34,17 @@ body {
   padding-block-end: clamp(0.75rem, 2vw, 1.25rem);
   font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  margin:clamp(0rem, -0.01rem + 0.03vw, 0.03125rem);
+}
 
 .button {
-  list-style: none;
+  text-decoration: none;
   display: block;
   margin: clamp(0.25rem, 1vw, 0.625rem) 0;
   background-color: hsl(0, 0%, 20%);
@@ -51,6 +59,10 @@ body {
   color: hsl(0, 0%, 20%);
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+}
+.button:focus {
+  outline: 2px solid hsl(75, 94%, 57%);
+  outline-offset: 3px;
 }
 
 .avatar {
