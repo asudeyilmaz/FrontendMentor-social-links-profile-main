@@ -1,9 +1,9 @@
-@font-face {
+
+ @font-face {
   font-family: "static";
   src: url("/assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-style: normal;
 }
-
 body {
   font-family: "static", sans-serif;
   background-color: hsl(0, 0%, 8%);
@@ -87,4 +87,6 @@ body {
 @media  screen and (max-width: 375px) {
 	html, body {
 		padding: 0; } 
+
   }
+
